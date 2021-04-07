@@ -28,7 +28,7 @@ operators.forEach( op => {
         
         }
         if(firstOperand && secondOperand){
-            result = operate(firstOperand,operations.shift(),secondOperand);
+            result = Math.round(operate(firstOperand,operations.shift(),secondOperand));
             screen.textContent = result;
             reset = true;
             console.log(firstOperand,secondOperand,result);
@@ -118,4 +118,21 @@ function multiply(a,b){
 function divide(a,b){
     return a/b;
 }
+
+
+// keyboard support
+
+window.addEventListener('keydown', e => {
+    if(e.key==='Backspace'){
+        let text = screen.textContent.trim();
+        screen.textContent = text.substr(0,text.length-1);
+        return;
+    }
+    if(isNaN(e.key)) return;
+    if(reset) {
+        screen.textContent = "";
+        reset = false;
+    }
+    screen.textContent  += e.key;
+});
 

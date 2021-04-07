@@ -54,3 +54,7 @@
 .btn-operator-active{
   background-color: #ffa655;
 }
+
+.btn-number:hover{
+  background-color: rgba(239,239,239,.4);
+}
