@@ -1,0 +1,56 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  width: 330px;
+  background-color: #ABAAAB;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.container_screen{
+  width: 93%;
+  height: 85px;
+  margin: 10px auto;
+  background-color: #EEEFEF;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 30px;
+  line-height: 2.5;
+}
+
+
+.container_btns{
+  margin: 10px;
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+  height: 330px;
+}
+
+.btn{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 16px;
+  letter-spacing:2px;
+}
+.btn:hover{
+  cursor: pointer;
+
+}
+.btn-clear{
+  grid-column: 1/3;
+  background-color: #FBA9AB;
+}
+.btn-delete{
+  grid-column: 3/5;
+  background-color: #ABA9FD;
+}
+
+.btn-operator-active{
+  background-color: #ffa655;
+}
